@@ -24,7 +24,7 @@ Matching points are connected visually with lines and labeled. All output is sav
 
 ├── main.py # Entry point: runs the full pipeline
 
-├── detect*stars.py # Star detection using blob detection
+├── detect\*stars.py # Star detection using blob detection
 
 ├── match_stars.py # Geometric hashing pattern matcher
 
@@ -32,7 +32,7 @@ Matching points are connected visually with lines and labeled. All output is sav
 
 ├── photos/ # Folder for input images
 
-├── results*\* # Auto-generated output directories
+├── results\*\* # Auto-generated output directories
 
 ---
 
@@ -42,13 +42,13 @@ Matching points are connected visually with lines and labeled. All output is sav
 
 Run the main script with two image paths:
 
-````bash
-python main.py photos/fr1.jpg photos/ST_db1.png
-````
+```bash
+python -m star_matcher.main photos/fr1.jpg photos/ST_db1.png
+```
+
 ---
 
-
-##  Requirements
+## Requirements
 
 To run this project, you need the following Python packages:
 
@@ -60,18 +60,21 @@ Install them using pip:
 ```bash
 pip install opencv-python numpy
 
-````
+```
 
 ## Example Output
 
 After running the matcher, the following output is generated:
 
 ### Input Images:
+
 These should be placed inside the `photos/` folder:
+
 - `fr1.jpg`
 - `ST_db1.png`
 
 ### Result:
+
 The matched stars are connected with colored lines:
 
 ![Sample Match Output](results/results_fr1_ST_db2/matches.jpg)
@@ -79,6 +82,7 @@ The matched stars are connected with colored lines:
 > This image shows a successful match between detected star patterns in both images.
 
 ### Files Generated:
+
 - `results_fr1_ST_db1/matched.png` – Visual match with lines
 - `results_fr1_ST_db1/image1_marked.png` – Input 1 with detected stars
 - `results_fr1_ST_db1/image2_marked.png` – Input 2 with detected stars
