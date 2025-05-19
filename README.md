@@ -22,17 +22,27 @@ Matching points are connected visually with lines and labeled. All output is sav
 
 .
 
-├── main.py # Entry point: runs the full pipeline
+├── star_matcher/ # Python package containing all source code
 
-├── detect\*stars.py # Star detection using blob detection
+│ ├── init.py # (Optional) Marks this directory as a package
 
-├── match_stars.py # Geometric hashing pattern matcher
+│ ├── main.py # Entry point: runs the full pipeline
 
-├── io_utils.py # Drawing and file I/O functions
+│ ├── detect_stars.py # Star detection using blob detection
+
+│ ├── match_stars.py # Geometric hashing pattern matcher
+
+│ └── io_utils.py # Drawing and file I/O functions
 
 ├── photos/ # Folder for input images
 
-├── results\*\* # Auto-generated output directories
+├── results/ # Auto-generated output directories
+
+│ └── results_fr1_ST_db2/ # Example output folder with matches
+
+│ └── matches.jpg # Visual result showing matched stars
+
+├── README.md 
 
 ---
 
